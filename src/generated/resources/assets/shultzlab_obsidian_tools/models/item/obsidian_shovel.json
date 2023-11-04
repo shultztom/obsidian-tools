@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "shultzlab_obsidian_tools:item/obsidian_shovel"
+  }
+}

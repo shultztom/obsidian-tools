@@ -25,5 +25,23 @@ public class ItemModels extends ItemModelProvider {
                 "layer0",
                 modLoc("item/obsidian_axe")
         );
+
+        singleTexture(Registration.SHOVEL.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0",
+                modLoc("item/obsidian_shovel")
+        );
+
+        singleTexture(Registration.SWORD.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0",
+                modLoc("item/obsidian_sword")
+        );
+
+        singleTexture(Registration.HOE.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0",
+                modLoc("item/obsidian_hoe")
+        );
     }
 }
