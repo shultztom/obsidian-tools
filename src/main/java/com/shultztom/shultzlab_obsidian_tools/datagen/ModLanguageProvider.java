@@ -13,5 +13,6 @@ public class ModLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         add(Registration.PICKAXE.get(), "Obsidian Pickaxe");
+        add(Registration.AXE.get(), "Obsidian Axe");
     }
 }

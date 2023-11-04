@@ -19,5 +19,11 @@ public class ItemModels extends ItemModelProvider {
                 "layer0",
                 modLoc("item/obsidian_pickaxe")
                 );
+
+        singleTexture(Registration.AXE.getId().getPath(),
+                mcLoc("item/handheld"),
+                "layer0",
+                modLoc("item/obsidian_axe")
+        );
     }
 }

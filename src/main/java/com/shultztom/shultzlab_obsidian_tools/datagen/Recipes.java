@@ -33,5 +33,16 @@ public class Recipes extends RecipeProvider {
                 .unlockedBy("has_obsidian", InventoryChangeTrigger.TriggerInstance.hasItems(
                         ItemPredicate.Builder.item().of(Tags.Items.OBSIDIAN).build()))
                 .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Registration.AXE.get())
+                .pattern("oo ")
+                .pattern("os ")
+                .pattern(" s ")
+                .define('o', Tags.Items.OBSIDIAN)
+                .define('s', Items.STICK)
+                .group("shultzlab_obsidian_tools")
+                .unlockedBy("has_obsidian", InventoryChangeTrigger.TriggerInstance.hasItems(
+                        ItemPredicate.Builder.item().of(Tags.Items.OBSIDIAN).build()))
+                .save(consumer);
     }
 }

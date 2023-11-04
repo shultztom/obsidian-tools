@@ -6,6 +6,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -35,7 +36,7 @@ public class shultzlab_obsidian_tools {
 
         @Override
         public float getSpeed() {
-            return 10;
+            return 12;
         }
 
         @Override
@@ -55,7 +56,7 @@ public class shultzlab_obsidian_tools {
 
         @Override
         public Ingredient getRepairIngredient() {
-            return Ingredient.of(Item.byId(49));
+            return Ingredient.of(Tags.Items.OBSIDIAN);
         }
     };
 
@@ -65,13 +66,13 @@ public class shultzlab_obsidian_tools {
         Registration.init(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(Registration::addCreative);
         modEventBus.addListener(DataGeneration::generate);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
-        LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -88,7 +89,6 @@ public class shultzlab_obsidian_tools {
         public static void onClientSetup(FMLClientSetupEvent event) {
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
         }
     }
 }

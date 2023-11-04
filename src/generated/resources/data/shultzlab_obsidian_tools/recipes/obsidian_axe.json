@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "shultzlab_obsidian_tools",
+  "key": {
+    "o": {
+      "tag": "forge:obsidian"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "oo ",
+    "os ",
+    " s "
+  ],
+  "result": {
+    "item": "shultzlab_obsidian_tools:obsidian_axe"
+  },
+  "show_notification": true
+}
